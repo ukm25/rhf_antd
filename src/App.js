@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Col, Divider, Row } from "antd";
+
+import "./App.css";
+import Header from "./Header";
+import Menu from "./Menu";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Row>
+      <Col
+        xs={{ span: 18, offset: 3 }}
+        md={{ span: 14, offset: 5 }}
+        style={{
+          backgroundColor: "#FE7440",
+          borderRadius: "10px",
+          marginTop: "50px",
+        }}
+      >
+        <Header />
+        <Divider />
+        <Menu />
+      </Col>
+    </Row>
   );
 }
 
